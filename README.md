@@ -39,7 +39,7 @@
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/resnet18-classifier-service.git
+   git clone https://github.com/SahanAnjana/resnet18-classifier-service.git
    cd resnet18-classifier-service
    ```
 
@@ -64,7 +64,7 @@
 
 ```bash
 mlflow server \
-  --backend-store-uri mysql+pymysql://user:password@localhost/mlflow \
+  --backend-store-uri mysql+pymysql://root:@localhost/mlflow \
   --default-artifact-root ./mlruns \
   --host 0.0.0.0 --port 5000
 ```
@@ -72,7 +72,7 @@ mlflow server \
 ### 2. Register Initial Model
 
 ```bash
-python scripts/setup_mlflow.py
+python -m scripts.setup_mlflow
 ```
 
 ### 3. Run the API Service
